@@ -8,13 +8,13 @@
         </title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         {% block stylesheets %}
-            <link rel="stylesheet" href="{{ asset('bundles/main/css/switchery.min.css') }}" type="text/css" media="all" />
-            <link rel="stylesheet" href="{{ asset('bundles/main/css/main.css') }}" type="text/css" media="all" />
+            <link rel="stylesheet" href="{{ asset('bundles/barmain/css/switchery.min.css') }}" type="text/css" media="all" />
+            <link rel="stylesheet" href="{{ asset('bundles/barmain/css/main.css') }}" type="text/css" media="all" />
         {% endblock %}
         {% block javascripts %}
-            <script src="{{ asset('bundles/main/js/jquery-2.1.4.min.js') }}" ></script>
-            <script src="{{ asset('bundles/main/js/switchery.min.js') }}" ></script>
-            <script src="{{ asset('bundles/main/js/main.js') }}" ></script>
+            <script src="{{ asset('bundles/barmain/js/jquery-2.1.4.min.js') }}" ></script>
+            <script src="{{ asset('bundles/barmain/js/switchery.min.js') }}" ></script>
+            <script src="{{ asset('bundles/barmain/js/main.js') }}" ></script>
         {% endblock %}
             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
             <link href='http://fonts.googleapis.com/css?family=Tinos:400,700|Kurale|Roboto+Slab:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
@@ -67,7 +67,7 @@
         
         <div id="columnRight">
             <div class="header">
-                <img id="logo" src="/bundles/main/images/logo2.png">
+                <img id="logo" src="{{ asset('/bundles/barmain/images/logo2.png') }}">
                 <a href="javascript:;" id="burger" onclick="burger()"><u></u><i></i><s></s></a>
             </div>
             

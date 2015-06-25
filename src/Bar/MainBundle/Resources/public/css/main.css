@@ -1,0 +1,236 @@
+/*
+Tinos, Kurale, Roboto Slab
+
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : Jun 23, 2015, 10:34:34 AM
+    Author     : Den
+*/
+body{
+    margin: 0;
+    font-family: Roboto slab;
+}
+
+#columnLeft{
+    width: 60%;
+    height: 100%;
+    float:left;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: #7C7C7C;
+    background-image: url(/bundles/main/images/bar1.png);
+    background-size: cover;
+    background-position: 63% 50%;
+}
+#columnRight{
+    width: 40%;
+    height: 100%;
+    float: left;
+    position: absolute;
+    right: 0;
+    top: 0;
+    background: #fff;
+    font-size: 13px;
+}
+
+.header{
+    border-bottom: 1px solid #070606;
+    height: 70px;
+    width: 100%;
+    display: table;
+}
+#logo{
+    margin: 9px auto 7px;
+    display: table;
+    height: 60px;
+}
+
+a#burger {
+    position: absolute;
+    display: block;
+    width: 39px;
+    height: 33px;
+    top: 20px;
+    right: 20px;
+    color: #000;
+}
+a#burger u { position: absolute; display: block; background: #666; width: 19px; height: 1px; top: 10px; left: 10px; }
+a#burger i { position: absolute; display: block; background: #666; width: 19px; height: 1px; top: 16px; left: 10px; opacity: 1; }
+a#burger s { position: absolute; display: block; background: #666; width: 19px; height: 1px; top: 22px; left: 10px; }
+
+
+
+.main-button{
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    font-weight: 400;
+    height: 41px;
+    line-height: 39px;
+    padding: 0 20px;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #000;
+    fill: #000;
+    margin: auto;
+    position: relative;
+    text-align: center;
+    -webkit-transition: border-color .2s ease-out,color .2s ease-out,width .2s ease-out;
+    transition: border-color .2s ease-out,color .2s ease-out,width .2s ease-out;
+    overflow: hidden;
+    z-index: 1;
+    border: 1px solid #868686;
+    clear: both;
+    width: 135px;
+    float: left;
+    margin-top: 40px;
+}
+.main-button:hover{
+  color: #fff;
+}
+
+.main-button:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -25%;
+    width: 150%;
+    height: 100%;
+    background-color: #5F5F5F;
+    z-index: -1;
+    -webkit-transform: rotate3d(0,0,1,45deg) translate3d(0,-3em,0);
+    transform: rotate3d(0,0,1,45deg) translate3d(0,-3em,0);
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transition: -webkit-transform .3s ease-out;
+    transition: transform .3s ease-out;
+}
+.main-button:hover:before{
+opacity: 1;
+  -webkit-transform: rotate3d(0,0,1,0deg);
+  transform: rotate3d(0,0,1,0deg);
+}
+.switchery {
+    border: none !important;
+}
+.leftMenu{
+    border-right: 1px solid #DFDFDF;
+    width: 65px;
+    height: 100%;float: left;
+}
+.leftMenu i{
+    text-align: center;
+    display: block;
+    font-size: 35px;
+    color: #E5E5E5;
+    margin-top: 0px;
+    padding-top: 13px;
+}
+.leftMenu .switch{
+    display: table;
+    border-top: 1px solid #FFF0F0;
+    padding: 10px 8px;
+    border-bottom: 1px solid #ddd;
+    margin-top: 12px;
+}
+#columnLeft .content{
+    float: left;
+    width: 80%;
+    color: #fff;
+}
+#columnLeft .content h1{
+    font-size: 35px;
+    margin-left: 40px;
+    margin-bottom: 0;
+}
+#columnLeft .subtitle{
+    margin-left: 40px;
+    font-size: 17px;
+}
+.specification{
+    position: absolute;
+    bottom: 100px;
+    font-size: 13px;
+}
+.wrenchColumn{
+    float: left;
+    width: 52px;
+    height: 98px;
+    border-top: 1px solid #DFDFDF;
+    border-bottom: 1px solid #DFDFDF;
+}
+
+.wrenchColumn i{
+    text-align: center;
+    display: block;
+    padding-top: 31px;
+    font-size: 22px;
+}
+.numberColumn{
+    float: left;
+    border: 1px solid #DFDFDF;
+    padding-right: 15px;
+}
+.numberColumn ul.first{
+    list-style: none;
+    margin: 0;
+    padding: 13px;
+    float: left;
+}
+.numberColumn ul.second{
+    float: left;
+    list-style: none;
+    padding: 0;
+}
+.buttons{
+    position: absolute;
+    right: 0;
+    bottom: 100px;
+}
+.buttons i{
+    border: 1px solid #ddd;
+    color: #fff;
+    text-align: center;
+    display: block;
+    font-size: 20px;
+    padding: 15px;
+}
+
+#columnRight .content{
+    position: relative;
+    top: 20%;
+    padding: 0 45px;
+}
+.description{
+    
+}
+.description p{
+    line-height: 27px;
+}
+
+#columnRight .info{
+    margin-top: 25px;
+}
+#columnRight .info p{
+    margin-bottom: 0;
+}
+.bold{
+    font-weight: bold;
+}
+#columnRight .square{
+    float: left;
+    border: 1px solid #868686;
+    padding-right: 15px;
+    line-height: 25px;
+    margin-top: 15px;
+}
+#columnRight .square ul{
+    list-style: none;
+    margin: 0;
+    padding: 13px;
+    float: left;
+}
