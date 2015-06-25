@@ -8,82 +8,47 @@
         </title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         {% block stylesheets %}
+            <link rel="stylesheet" href="{{ asset('bundles/main/css/switchery.min.css') }}" type="text/css" media="all" />
             <link rel="stylesheet" href="{{ asset('bundles/main/css/main.css') }}" type="text/css" media="all" />
         {% endblock %}
         {% block javascripts %}
+            <script src="{{ asset('bundles/main/js/jquery-2.1.4.min.js') }}" ></script>
+            <script src="{{ asset('bundles/main/js/switchery.min.js') }}" ></script>
             <script src="{{ asset('bundles/main/js/main.js') }}" ></script>
         {% endblock %}
             <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
             <link href='http://fonts.googleapis.com/css?family=Tinos:400,700|Kurale|Roboto+Slab:400,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+        
+            <script>
+                $(function(){
+                    var elem = document.querySelector('.js-switch');
+                    var init = new Switchery(elem);
+                });
+            </script>    
     </head>
     <body>
-        <div id="columnLeft" style="background-image: url(/bundles/main/images/bar1.png); background-size: cover;background-position: 63% 50%;">
-            
-            <div style="border-right: 1px solid #DFDFDF;
-width: 65px;
-height: 100%;float: left;">
-                <i class="fa fa-question-circle" style="text-align: center;
-display: block;
-font-size: 35px;
-color: #E5E5E5;
-margin-top: 0px;
-padding-top: 13px;"></i>
+        <div id="columnLeft">
+            <div class="leftMenu">
+                <i class="fa fa-question-circle"></i>
+                <div class="switch">
+                    <input type="checkbox" class="js-switch" />
+                </div>
             </div>
-            <div style="
-    float: left;
-    width: 80%;
-    color: #fff;
-    
-">
-                <p style="
-    font-size: 55px;
-    margin-left: 40px;
-    margin-bottom: 0;
-">Norwood Home Bar with Foot Rail</p>
-                <p style="
-    margin-left: 40px;
-    font-size: 22px;
-">Private person</p>
-                <div style="
-    position: absolute;
-    bottom: 100px;
-    font-size: 13px;
-">
-                    <div style="
-    float: left;
-    width: 52px;
-    height: 98px;
-    border-top: 1px solid #DFDFDF;
-    border-bottom: 1px solid #DFDFDF;
-">
-                        <i class="fa fa-wrench" style="
-    text-align: center;
-    display: block;
-    padding-top: 31px;
-    font-size: 22px;
-"></i>
+            <div class="content">
+                <h1>Norwood Home Bar with Foot Rail</h1>
+                <p class="subtitle">Private person</p>
+                <div class="specification">
+                    <div class="wrenchColumn">
+                        <i class="fa fa-wrench"></i>
                     </div>
-                    <div style="
-    float: left;
-    border: 1px solid #DFDFDF;
-    padding-right: 15px;
-">
-                        <ul style="
-    list-style: none;
-    margin: 0;
-    padding: 13px;
-    float: left;
-">
+                    <div class="numberColumn">
+                        <ul class="first">
                             <li>Width:</li>
                             <li>Height:</li>
                             <li>Depth:</li>
                             <li>Material:</li>
                         </ul>
-                        <ul style="
-    float: left;
-    list-style: none;
-    padding: 0;
-">
+                        <ul class="second">
                             <li>200 cm.</li>
                             <li>120 cm.</li>
                             <li>65 cm.</li>
@@ -92,64 +57,39 @@ padding-top: 13px;"></i>
                     </div>
                 </div>
             </div>
+            
+            <div class="buttons">
+                <i class="fa fa-picture-o"></i>
+                <i class="fa fa-gear"></i>
+                <i class="fa fa-arrows"></i>
+            </div>
         </div>
+        
         <div id="columnRight">
             <div class="header">
-                <img id="logo" src="{{ asset('bundles/main/images/logo2.png')}}">
+                <img id="logo" src="/bundles/main/images/logo2.png">
                 <a href="javascript:;" id="burger" onclick="burger()"><u></u><i></i><s></s></a>
             </div>
             
-            <div style="
-    position: relative;
-    top: 20%;
-    padding: 0 45px;
-">
-                <div>
-                    <p style="
-    line-height: 27px;
-">Perfect for entertaining, the Norwood bar will be a gorgeous addition to your home. Finished in a rich medium cherry this bar features a durable laminate top that resists heat, moisture, and scratches.</p>
+            <div class="content">
+                <div class="description">
+                    <p>Perfect for entertaining, the Norwood bar will be a gorgeous addition to your home. Finished in a rich medium cherry this bar features a durable laminate top that resists heat, moisture, and scratches.</p>
                 </div>
-                <div style="
-    margin-top: 25px;
-">
-                    <p style="
-    margin-bottom: 0;
-    font-weight: bold;
-">Top material</p>
-                    <p style="
-    margin-top: 7px;
-">The same with main material.</p>
-                    <p style="
-    margin-bottom: 0;  font-weight: bold;
-">Main material</p>
-                    <p style="
-    margin-top: 7px;
-">White Oak from Russia, Siberia.</p>
+                <div class="info">
+                    <p class="bold">Top material</p>
+                    <p style="margin-top: 7px;">The same with main material.</p>
+                    <p class="bold">Main material</p>
+                    <p style="margin-top: 7px;">White Oak from Russia, Siberia.</p>
                 </div>
                 
-                <div style="
-    float: left;
-    border: 1px solid #868686;
-    padding-right: 15px;
-    line-height: 25px;
-    margin-top: 15px;
-">
-                        <ul style="
-    list-style: none;
-    margin: 0;
-    padding: 16px;
-    float: left;
-">
+                <div class="square">
+                        <ul>
                             <li>Production time:</li>
                             <li>Stock availability:</li>
                             <li>Price:</li>
                             <li>Delivery:</li>
                         </ul>
-                        <ul style="
-    float: left;
-    list-style: none;
-    padding: 0;
-">
+                        <ul>
                             <li>2 weeks</li>
                             <li>No</li>
                             <li>850 $</li>
@@ -159,7 +99,6 @@ padding-top: 13px;"></i>
                 <a class="main-button" href="#" style="">Buy</a>
             </div>       
                 
-            
         </div>
     </body>
 </html>
