@@ -4,4 +4,3 @@
 !app/logs/.gitkeep
 /app/phpunit.xml
 /composer.phar
-/vendor
