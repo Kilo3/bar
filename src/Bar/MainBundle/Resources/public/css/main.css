@@ -22,7 +22,7 @@ body{
     left: 0;
     top: 0;
     background: #7C7C7C;
-    background-image: url(/bundles/main/images/bar1.png);
+    background-image: url(../images/bar1.png);
     background-size: cover;
     background-position: 63% 50%;
 }
