@@ -3,7 +3,7 @@
     <head>
         <title>
             {% block title %}
-                easy title
+                title bar
             {% endblock %}
         </title>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -22,16 +22,18 @@
             <script>
                 $(function(){
                     var elem = document.querySelector('.js-switch');
-                    var init = new Switchery(elem);
+                    Switchery(elem);
+                    //var init = new Switchery(elem);
                 });
-            </script>    
+            </script>
     </head>
     <body>
         <div id="columnLeft">
             <div class="leftMenu">
                 <i class="fa fa-question-circle"></i>
                 <div class="switch">
-                    <input type="checkbox" class="js-switch" />
+                    <input type="checkbox" id="color-toggler" name="info" class="js-switch" />
+                    <label for="color-toggler" style="display: none;">Info:</label>
                 </div>
             </div>
             <div class="content">
@@ -68,7 +70,7 @@
         <div id="columnRight">
             <div class="header">
                 <img id="logo" src="{{ asset('/bundles/barmain/images/logo2.png') }}">
-                <a href="javascript:;" id="burger" onclick="burger()"><u></u><i></i><s></s></a>
+                <a href="javascript:" id="burger" onclick="burger()"><i></i><i></i><s></s></a>
             </div>
             
             <div class="content">
